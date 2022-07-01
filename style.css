@@ -1,0 +1,145 @@
+body{
+    background-color:#fff9aa;
+    font-family: 'Noto Sans KR';
+    letter-spacing: -0.5px;
+
+}
+article{
+    display: flex;
+    flex-direction: column;
+}
+#title{
+    margin-bottom: 40px;
+}
+#img{
+    
+    width: 400px;
+    height: 400px;
+    padding-top: 20px;
+    margin:0 auto;
+}
+
+.question{
+    display: none;
+}
+/* .label{
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    color:black;
+    font-size: 19px;
+  } */
+.result{
+    display: none;
+}
+/* result창 share button 가운데 정렬 */
+.share{
+    margin:0 auto;
+}
+.button{
+    /* width: 400px;
+    height:100px; */
+    margin:100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff9aa;
+    border-color: #fff9aa;
+    color: #1c1c1c;
+}
+.butt{
+    /* width: 400px;
+    height:100px; */
+    margin:100px;
+    background-color: #fff9aa;
+    border-color: #fff9aa;
+    color: #1c1c1c;
+}
+/* 버튼 마우스 오버 effect */
+.btn {
+	position: relative;
+	z-index: 2;
+	background-color: #ffffff;
+	border-color: #ffffff;
+	color: rgb(51, 51, 51);
+    /* margin-left:200px;
+    margin-right:200px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+	overflow: hidden;
+}
+.btn:hover{
+	background-color: #bda400;
+    color:#f1f1f1;
+    letter-spacing: 5px;
+}
+.btn:active{
+    background-color: #bda400;
+    color:#f1f1f1;
+    border-color:none;
+}
+btn:visited{
+    background-color: #f1f1f1;
+	border-color: #f1f1f1;
+    color: #333;
+}
+
+.progress-bar{
+    height: 100%;
+    border-radius: 20px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+52,ff5c5c+100;Red+3D+%231 */
+    background: #000000;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #fff6a3 0%, #fff194 52%, #ffdd00 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fff069 0%, #fff194  52%, #ffdd00 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fff069 0%, #ffe640  52%, #ffdd00 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#febbbb', endColorstr='#ff5c5c', GradientType=0);
+}
+
+.horizon_line{
+    width: 500px;
+    color:#1c1c1c;
+    border-bottom:0px;
+    text-align:center;
+    margin:0 auto;
+}
+
+.horizon_line2{
+    width: 20px;
+    height:30px;
+    color:#0a1950;
+    border-bottom:0px;
+    text-align:center;
+    margin:0 auto;
+}
+
+.box{
+    background-color:rgb(216, 202, 0);
+    border-color: rgb(216, 202, 0);;
+    opacity: 0.8;
+    color:rgb(0, 0, 0);
+    border-style:solid;
+    border-width: 2px 4px;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 25px;
+    padding-right:25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 30px;
+    margin: 10px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.banner-img {
+    width: 300px;
+    height: 405.17px;
+}

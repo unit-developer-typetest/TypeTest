@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 개발자 유형 찾기 테스트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+ <body class="container">
+    <article class="start">
+        <h2 class="mt-5 text-center"  style="font-weight: 300; font-size: medium;">나는 어떤 개발자가 어울릴까??</h2>
+        <h1 class="main-title mt-2 text-center" style="font-weight: 500;">나의 <b>창캐미</b><br>개발자 유형 찾기 테스트<br></h1>
+        <button type="button" class="button mt-5" onclick='start();'>테스트 시작하기</button>
+    </article>
+
+    <article class="question">
+        <div class="stausText mt-4">
+            <div class="label" >
+            </div>
+          </div>
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%);" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        <h2 id="title1">Question</h2>  
+        <h2 id="title" class="text-center mt-5" style="font-weight: 400;">문제<br></h2>
+        <hr class="horizon_line">
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn mt-5">1번</button>
+        <button id="B" type="button" class="btn mt-5">2번</button>
+        <!-- btn-primary -->
+    </article>
+
+    <article class="result">
+        <img id="img" src="imgs/soccer.png" alt="cj">
+        <h1 id="extra_cj" class="text-center" style="font-weight: 400; font-size: medium;">창캐미 설명</h1>
+        <h2 id="cj" class="text-center" style="font-weight: 900; font-size: 30px;"><b>창캐미 이름</b></h2>
+        <br>
+        <h4 id="explain" class="mt-5 box" style="font-weight: 300; font-size: medium;">설명</h3>
+        <button type="butt" onclick="reset();">다시 테스트 하기!</button>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    </article>
+
+    <article class="kakao_ad mt-5">
+       
+        <ins
+          class="kakao_ad_area"
+          style="display: none"
+          data-ad-unit="DAN-PwXjskx5WFbEMAMI"
+          data-ad-width="320"
+          data-ad-height="100"
+        ></ins>
+      </article>
+      <script
+        type="text/javascript"
+        src="//t1.daumcdn.net/kas/static/ba.min.js"
+        async
+      ></script>
+    <!-- <article class="copyright">
+        <br></br>
+        <hr class="horizon_line">
+        <span class="mt-5 text-center" style="font-size:small;opacity: 0.5;">
+            Copyright 2021 @Urdervi.yu<br><b>Contact |</b> alswlkku@ajou.ac.kr</br><br>
+        </span>
+    </article>
+    <a class="mt-5 banner" href="https://www.codelion.net/catalog?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=jocoding">
+        <img class="banner-img" src="imgs/banner.png" alt="banner"> -->
+    <!-- mbti 검사 점수 -->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        var num=1;
+        var q={
+            1: {"title1":"Q1","title": "12시 수업을 막 마친 당신, <br>마침 한 시간 공강이라 점심을 먹으려 한다.</br>", "type": "EI", "A":"“점심 먹을 사람?, 공강 모여~~~~”와 함께 과단톡으로 직행한다.”", "B":"친구 부를 필요 뭐 있나, 혼밥이 편하고 좋다. 아싸 뭐 먹지~"},
+            2: {"title1":"Q2","title": "“이번 주말에 뭐해?” 라는 질문에, <br>다음 중 당신이 할 만한 대답은?</br>", "type": "JP", "A":"조조영화 볼 거야. 좋아하는 배우 신작 나왔거든. 예매? <br>당연히 해놨지~ 아, 그리고 공차 신상 나왔더라. 사먹어볼까 생각 중.</br>", "B":"주말? 글쎄… 생각해보진 않았는데. 오랜만에 영화나 볼까."},
+            3: {"title1":"Q3","title": "회사에서 나는 어떤 역할일까?", "type": "TF", "A":"하는 일이 너무 없어 칼퇴한다. 조금 눈치가 보이지만 월급루팡 최고다.", "B":"나에게 너무 많은 업무가 주어져 매일 야근을 한다. 이러한 나의 노력을 남들이 알아줬으면 한다."},
+            4: {"title1":"Q4","title": " 친구와 영화를 보고 나오는 길이다.<br>당신이 나누고 싶은 대화는?</br>", "type": "SN", "A":"크~ 재밌었다. 연기도 너무 좋았어.", "B":"너라면 그 상황에서 어떻게 할 거야? 그래? <br>그럼 만약에 세상이 무너지면? 만약에 지구가 멸망하면? 만약에~…</br>"},
+            5: {"title1":"Q5","title": "친구와 술자리를 갖던 중 소개해주고 싶은 <br>사람이 있다고 한다.</br><p>지금 불러도 되냐고 물을 때 당신의 반응은?</p>", "type": "EI", "A":"언제나 환영. 새로운 사람과의 대화는 항상 즐겁다. 불러 불러~ ", "B":"으아… 불편한데. 시끄러운 술자리는 지친다. 딱 지금이 좋아. 오늘은 우리끼리 마시자."},
+            6: {"title1":"Q6","title": "교수님이 내 이름을 아신다", "type": "EI", "A":"기분이 좋다", "B":"왜 내 이름을..?"},
+            7: {"title1":"Q7","title": "기존에 있던 수강신청 방법이 새로 바뀐다고 공지가 올라온다면 나는 무슨 생각할까?", "type": "SN", "A":"기존에 있는 것도 나쁘지 않았다고 생각한다.", "B":"오! 너무 좋은데 나는 이렇게 더 추가했으면 좋았을텐대!!"},
+            8: {"title1":"Q8","title": "친구가 모르는 문제를 물어본다. 그럴 때 나는?", "type": "SN", "A":"개념 그대로를 친구에게 설명해준다.", "B":"예시를 들어서 설명해준다"},
+            9: {"title1":"Q9","title": "교수님에게 칭찬을 받게 될 때 더 기분 좋은 말은?", "type": "TF", "A":"좋은 결과 나올거다. 잘했다", "B":"열심히 노력한게 보인다"},
+            10: {"title1":"Q10","title": "침대에서 눈을 떴는데 수업 시작 1분 전이다.<br>몸은 굉장히 피곤한 상태! 그럴 때 나는?</br>", "type": "JP", "A":"최대한 빨리 수업에 참여한다.", "B":"수업 하루쯤 빠져도 괜찮다고 생각한다."},
+            11: {"title1":"Q11","title": "신입생 시절 어색한 상황에서 <br>친구를 만들기 위해 나는?</br>", "type": "TF", "A":"친구에게 계속 질문을 던져준다.", "B":"친구가 말하는 것에 적절한 리액션으로 반응해준다."},
+            12: {"title1":"Q12","title": "수강신청 이틀 전, 당신의 시간표 상태는?","type": "JP", "A":"학과에서 권장하는 커리큘럼 기반으로 플랜a부터 플랜c까지 다 짜놨다. 만족스럽다.","B":"황량하다. 확정된 건 전공필수 두 과목 뿐. <br>이대로면 6학점이지만, 괜찮다. 당신에겐 아직 ‘이틀이나’ 남았다.</br>"}
+        }
+        var result={
+            "INTP":{"extra":"백엔드","cj":"뒤끝 창캐미",
+            "explain":" •효율을 중요시하는 당신은, 매사 최적의 방법을 고민해요<br><br> •상상을 현실로! 아이디어를 실체화하는 데 탁월해요<br><br> •비슷한 성향의 사람들과 함께라면 협업도 환영이에요<br><br> •규칙적이고 반복적인 일은 질색이에요<br><br> •상황에 적응하고 알맞게 대처하는 능력이 뛰어나요","img":"imgs/paldal.png"},
+            
+            "INFP":{"extra":"TA","cj":"공상가 창캐미",
+            "explain":"성호 다리 구석에서 볼 수 있는 성호관 치토에요!<br><br>성호관 치토는 완벽주의인 면이 있어서 남들 다 노는 1학년 때부터 발표 준비를 미리 준비하는 타입이에요.(남들의 시선이 무서워서 더 열심히 준비하는 면이 있어요.)하지만, 귀차니즘은 그들이 가지고 있는 만성고질병이에요. 혼자 있는게 좋은데 또 혼자 있는게 싫은 성호관 치토는 사람이 많은 곳에서도, 없는 곳에서도 자주 보여요. <br><br>★성호관 매점에서 성호관 치토를 만날 일은 드물어요.","img":"imgs/seongho.png"},
+            
+            "INTJ":{"extra":"데이터분석가","cj":"과학자 창캐미",
+            "explain":"서관에서 만날 수 있는 냉철한 서관 치토에요!<br><br>서관 치토는 정확하고 계산된 움직임을 가지고 있어요. 본인과 비슷한 아주인들을 좋아하여 공대 향기가 물씬나는 서관에 머무르게 되었어요. 학생들과 수업을 함께 들을 정도로 지식 습득하는 일을 즐거워하고, 자신의 높은 지식을 스스로가 자랑스러워해요. 가벼운 잡담을 낯설어하기 때문에 다른 치토들과는 친하지 않지만, 기계공학과 학생들 사이에서 서관 치토는 나름의 빛을 발휘하고 있어요.<br><br>★공대생은 체크셔츠라는 밈이 있어서 서관 치토도 체크 셔츠를 입고 있어요:)","img":"imgs/seog.png"},
+            
+            "INFJ":{"extra":"풀스택","cj":"유목민 창캐미",
+            "explain":"다산관 열람실에서 자주 만날 수 있는 다람실 요정 다산관 치토에요!<br><br>다산관 치토는 특유의 단호함과 결단력이 있어서 본인의 꿈을 위해 게으름 피우지 않고 꾸준하게 본인이 해야할 것을 수행해요.(학기 중에는 할 것이 많아서 하루종일 다람실에 있답니다ㅠㅠ)다산관 치토는 다람실에서 열심히 공부하는 학우들이 지친 모습을 보일 때면 따듯하게 위로해주는 치토랍니다.<br><br>★늘 다정한 치토이지만 스트레스 받아보인다면 혼자 두는게 상책이에요:)","img":"imgs/daram.png"},
+            
+            "ISTP":{"extra":"임베디드/아키텍처","cj":"고고학자 창캐미",
+            "explain":" •논리적이고 꼼꼼한 당신은 프로일잘러예요<br><br> •배우고 싶은 게 많아 이것저것 시도해보는 편이에요<br><br> •협업보다는 혼자 일하는 걸 선호해요 (협업이 불가피할 땐 리더 역할을 선호해요)<br><br> •생산적이고 효율적인 라이프스타일을 추구해요<br><br> •대충대충이란 사전에 없다! 목표한 일은 마무리까지 완벽하게 해내요","img":"imgs/hwaseok.png"},
+            
+            "ISFP":{"extra":"DB","cj":"사서 창캐미",
+            "explain":"정문에서 가장 먼 곳에 살고 있는 산학협력원 치토에요!<br><br>산학협력원 치토는 예술적인 끼를 뽐내기 위해 미디어학과 수업과 건축학과 수업을 병행하여 듣고 있어요. 하지만, 매일 A교시 산학협력원 수업이 있는 산학협력원 치토는 그곳에서 그냥 살기로 결정했다는 슬픈 사연을 가지고 있어요. 그래도 산학협력원을 감싸는 숲에서 많은 동물 친구들과 만나며 영감을 받고 있답니다. <br><br>★산학협력원 치토는 작은 칭찬에도 자아도취되어 예상치 못한 일을 할 수도 있어요.","img":"imgs/sanhak.png"},
+            
+            "ISTJ":{"extra":"시스템개발자","cj":"건축가 창캐미",
+            "explain":"학군단에서 살고 있는 학군단 치토에요!<br><br>학군단 치토는 청렴, 결백이 잘 어울리는 치토에요. 군대와 같이 전통이나 질서를 중시하는 조직에서 핵심 구성원 역할을 하기 때문에 학군단에 들어가기로 결심했어요. 가끔 냉혈하다는 소리를 듣지만 그 말은 학군단 치토에게 너무 상처 되는 말이에요. 그저 감정 표출이 익숙하지 않은 것 뿐이랍니다ㅠㅠ<br><br>★방학에는 훈련이 있어 아주대를 비울 때도 있어요.","img":"imgs/hakgun.png"},
+            
+            "ISFJ":{"extra":"블록체인","cj":"모험가 창캐미",
+            "explain":"간호사를 꿈꾸는 홍재관 치토에요!<br><br>홍재관 치토는 무엇을 받으면 몇 배로 돌려주는 이타적인 성격을 가진 치토에요. 홍재관 치토는 완벽주의자만큼이나 세심하고 꼼꼼한 성격을 가지고 있어서 필기왕이랍니다. 다른 치토들 혹은 아주대 학우들이 힘들어하는 모습을 본다면 가장 많이 응원해주고 힘을 붇돋워 주는 치토랍니다<br><br>★홍재관 치토에게 부탁할 일이 있다면 완벽하지만 시간이 조금 걸린다는거! 양해 부탁드려요:)","img":"imgs/vhongjae.png"},
+            
+            "ENTP":{"extra":"IOS앱","cj":"사과 창캐미",
+            "explain":"율구리(율곡관 옆구리)에서 많이 볼 수 있는 율곡관 치토에요!<br><br>율곡관 치토는 다재다능해서 무엇을 하든 간에 평균은 하는 치토에요. 자존감이 높고 자기에 대한 확신이 있기 때문에 다른 치토가 율곡관 치토에게 뭐라고 하는 일에 대해 참지 못해요. 나오는대로 말을 뱉어서 다른 치토들과는 다툼이 잦지만, 유머 감각이 넘치는 치토에요.<br><br>★율곡관 치토와 대화하게 된다면 농담이라도 무시하는 발언을 하면 안돼요!","img":"imgs/yulgok.png"},
+            
+            "ENFP":{"extra":"AI","cj":"알파고 창캐미",
+            "explain":"드넓은 잔디밭이 좋은 텔동 치토에요!<br><br>텔동 치토는 정열적이고 활기 넘치는 치토에요. 사람들을 만나는 것이 좋아서 텔레토비에 자리를 잡았어요. 하지만 종종 혼자마의 시간을 필요로해서 나홀로 나무 옆에서 멍하니 앉아 있기도 해요. 행사나 일을 잘 진행하는 타입이기 때문에 텔동에 행사가 있다면 텔동 치토를 손쉽게 찾을 수 있어요.<br><br>★텔동치토가 나홀로 나무 옆에 있다면 혼자 두세요..... ","img":"imgs/teldong.png"},
+            
+            "ENTJ":{"extra":"보안전문가","cj":"경찰 창캐미",
+            "explain":"금요일마다 등장하는 축구장 치토에요!<br><br>축구장 치토는 천성적으로 타고난 리더로써, 넘치는 카리스마와 자신감으로 축구장에 있는 관중들을 이끌고 진두지휘하고 있어요! 많은 관중들을 아주대학교 축구부로 이끄는 성취 가능한 도전에 행복을 느끼고 있답니다.<br>축구장 치토는 남 일에 신경을 쓰지 않는 타입이라 다른 치토들이 뭐하는지 궁금해하지 않아요. 감정 공감이 서툴어서 다른 치토들에게 상처를 주는 일도 있지만 성호관 치토와 친해요.<br><br>★ 축구장의 치토를 찾고 싶다면 아주대학교축구부(<b>Instram</b> @ajoufootball)과 함께해주세요 :)"
+            ,"img":"imgs/soccer.png"},
+            
+            "ENFJ":{"extra":"프론트엔드","cj": "앞끝 창캐미",
+            "explain":"여름에 색다른 푸르름이 특징인 노천극장에 사는 노천극장 치토에요!<br><br>노천극장 치토는 카리스마와 열정을 가지고 있느 리더에요. 아주대학교를 더 나은 방향으로 만들기 위해 다른 치토들과 회의를 일주일마다 하는데 회의 장소가 노천극장이라 이 곳에 머무르게 되었어요. 어려움을 도맡아하는 성격이기 때문에 치토들이 노천극장 치토를 믿고 신뢰하고 있어요.<br><br>★노천극장 치토는 남의 일도 본인 일처럼 생각하기 때문에 늘 바빠서 만나기 힘들어요ㅠㅠ","img":"imgs/nochun2.png"},
+            
+            "ESTP":{"extra":"게임엔진","cj":"아인슈타인 창캐미",
+            "explain":"하나에 꽂히면 끝을 보는 타입이에요<br><br>추상적인 아이디어를 구체화하는 데 탁월해요<br><br>관심 있는 분야라면 집중력 MAX! 선택과 집중의 달인이에요<br><br>다양한 사람들과 소통하고 어울리면서도, 일은 혼자 하는 걸 선호해요<br><br>명확한 주제를 가지고 생산적인 대화를 나누는 걸 즐겨요<br><br>","img":"imgs/cafe.png"},
+            
+            "ESFP":{"extra":"게임클라이언트","cj":"창조주 창캐미",
+            "explain":"국제학사 앞에서 종종 만날 수 있는 국제학사 치토에요!<br><br>국제학사 치토는 학교 내 인싸로 통해요. 어떻게 친해졌는지는 모르겠지만 외국인 유학생들도 엄청 친해서 국제학사에 자리를 잡았어요. 가끔 충동적으로 국제학사 외 건물로 떠나는 일이 많아요.(국제학사 치토에게는 친구가 많기 때문이에요) 국제학사 치토는 자유로운 아주대가 참 좋아요.<br><br>★국제학사 치토와 놀려면 미리 연락해야해요:)","img":"imgs/gukje.png"},
+            
+            "ESTJ":{"extra":"QA","cj":"사감 창캐미",
+            "explain":"아주대의 유노윤호 학생회관 치토에요!<br><br>하고 싶은 일이 많고 지치지 않는 학생회관 치토는 학생회관에 자리를 잡았어요. 동아리 활동을 해야하기 때문이에요. 학생회관 치토가 가입한 동아리만 무려 4개에요. 그래서 다른 치토들은 가슴에 파란 불꽃을 가지고 있지만 학생회관 치토에게만은 붉은 불꽃을 가지고 있어요.<br><br>★학생회관 치토는 귀가 얇아서 동아리 가입 권유를 거절하지 않아요:)","img":"imgs/nochun.png"},
+            
+            "ESFJ":{"extra":"안드로이드앱","cj":"별별 창캐미",
+            "explain":"제2의 이국종 교수님을 꿈꾸는 송재관 치토에요!<br><br>송재관 치토는 사람을 너무 좋아해요. 스트레스를 받는 일이 있어도 누군가와 만나야 풀리고 고민이 있어도 누군가와 함께 해결해요. 다른 치토들을 챙기는 것을 좋아하지만 책임감 때문에 어쩔 수 없이 챙길 때도 있어요. 한번 시작한 일은 끝장을 보는 치토에요:)<br><br>★송재관 치토는 공부도 잘하지만 노는 것도 잘해요!","img":"imgs/songjae.png"},
+
+        }
+
+        function start(){
+            $(".start").hide();
+            //start 화면 사라지는거
+            $(".question").show();
+            //보여주기
+            next();
+        }
+        $("#A").click(function(){
+            var type=$("#type").val();
+            console.log(type);
+            var preValue=$("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+
+        });
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            if(num==13){
+                $(".question").hide();
+                $(".result").show();
+                    
+                var mbti="";
+                ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
+                ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#extra_cj").html(result[mbti]["extra"]);
+                $("#cj").html(result[mbti]["cj"]);
+                $("#explain").html(result[mbti]["explain"]);
+    
+            }else{
+                //$(".label").attr('style','innerHTML: num+1 +"/"+ endPoint;');
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%);');
+                $("#title1").html(q[num]["title1"]);
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+        function reset() {
+            num = 1;
+            $("#EI").val("");
+            $("#SN").val("");
+            $("#TF").val("");
+            $("#JP").val("");
+    
+            $(".progress-bar").attr(
+              "style",
+              "width: calc(100 / 12 * " + num + "%)"
+            );
+            $(".question").show();
+            $(".result").hide();
+            //$("#img").hide();
+            //$("#extra").hide();
+            //$("#cj").hide();
+            //$("#explain").hide();
+            $("#title1").html(q[num]["title1"]);
+            $("#title").html(q[num]["title"]);
+            next();
+          }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-603e210ada655552"></script>
+
+
+
+</body>
+</html>
