@@ -13,10 +13,18 @@ article{
 }
 #img{
     
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     padding-top: 20px;
     margin:0 auto;
+}
+
+#extra_cj{
+    padding-top: 40px;
+} 
+
+.main-title{
+    color: #000000;
 }
 
 .question{
@@ -39,21 +47,50 @@ article{
 .button{
     /* width: 400px;
     height:100px; */
+    border-radius: 4px;
     margin:100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 1rem 1rem;
     background-color: #fff9aa;
-    border-color: #fff9aa;
+    border-color: #000000;
     color: #1c1c1c;
+    font-weight: 600;
+    text-align: center;
 }
-.butt{
-    /* width: 400px;
-    height:100px; */
+
+.button:active,
+.button:hover,
+.button:focus {
+    background: var(--button-hover-bg-color);
+    outline: 0;
+    background-color: #ffee7f;
+    border-color:none;
+}
+.button:disabled {
+  opacity: 0.5;
+}
+/* .butt{
+    border-radius: 4px;
     margin:100px;
+    padding: 1rem 1rem;
     background-color: #fff9aa;
-    border-color: #fff9aa;
+    border-color: #000000;
     color: #1c1c1c;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+} */
+/* .butt:active,
+.butt:hover,
+.butt:focus {
+    background: var(--button-hover-bg-color);
+    outline: 0;
+    background-color: #ffee7f;
+    border-color:none;
 }
+.butt:disabled {
+  opacity: 0.5;
+} */
 /* 버튼 마우스 오버 effect */
 .btn {
 	position: relative;
@@ -68,24 +105,22 @@ article{
 	overflow: hidden;
 }
 .btn:hover{
-	background-color: #bda400;
-    color:#f1f1f1;
+	background-color: #ffee7f;
     letter-spacing: 5px;
 }
 .btn:active{
-    background-color: #bda400;
-    color:#f1f1f1;
-    border-color:none;
+    background-color: #ffee7f;
+    /* border-color:none; */
 }
-btn:visited{
+/* btn:visited{
     background-color: #f1f1f1;
 	border-color: #f1f1f1;
     color: #333;
-}
+} */
 
 .progress-bar{
     height: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+52,ff5c5c+100;Red+3D+%231 */
     background: #000000;
     /* Old browsers */
@@ -116,8 +151,8 @@ btn:visited{
 }
 
 .box{
-    background-color:rgb(216, 202, 0);
-    border-color: rgb(216, 202, 0);;
+    background-color:rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);;
     opacity: 0.8;
     color:rgb(0, 0, 0);
     border-style:solid;
@@ -130,6 +165,7 @@ btn:visited{
     padding-bottom: 20px;
     line-height: 30px;
     margin: 10px;
+    font-weight: 500;
 }
 
 .banner {
