@@ -19,6 +19,15 @@ article{
 #title{
     margin-bottom: 40px;
 }
+
+#img2{
+    
+    width: 400px;
+    height: 500px;
+    padding-top: 50px;
+    margin:0 auto;
+}
+
 #img{
     
     width: 400px;
@@ -118,11 +127,14 @@ article{
 .btn:active{
     background-color: #ffee7f;
 }
-/* btn:visited{
+.btn:visited{
     background-color: #f1f1f1;
 	border-color: #f1f1f1;
     color: #333;
-} */
+} 
+.btn:disabled {
+    opacity: 0.3;
+  }
 
 .progress-bar{
     height: 100%;
@@ -207,7 +219,7 @@ article{
 }
 .cj_button{
     display :inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
     border-radius: 4px;
     background-color: #fff9aa;
     border: 0;
