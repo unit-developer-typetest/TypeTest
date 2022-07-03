@@ -13,15 +13,15 @@ article{
 }
 #img{
     
-    width: 500px;
+    width: 400px;
     height: 500px;
-    padding-top: 20px;
+    padding-top: 50px;
     margin:0 auto;
 }
 
 #extra_cj{
-    padding-top: 40px;
-} 
+    padding-top: 35px;
+}
 
 .main-title{
     color: #000000;
@@ -68,7 +68,7 @@ article{
 .button:disabled {
   opacity: 0.5;
 }
-/* .butt{
+.butt{
     border-radius: 4px;
     margin:100px;
     padding: 1rem 1rem;
@@ -79,8 +79,8 @@ article{
     text-align: center;
     cursor: pointer;
     font-weight: 500;
-} */
-/* .butt:active,
+} 
+.butt:active,
 .butt:hover,
 .butt:focus {
     background: var(--button-hover-bg-color);
@@ -90,7 +90,7 @@ article{
 }
 .butt:disabled {
   opacity: 0.5;
-} */
+}
 /* 버튼 마우스 오버 effect */
 .btn {
 	position: relative;
@@ -98,8 +98,7 @@ article{
 	background-color: #ffffff;
 	border-color: #ffffff;
 	color: rgb(51, 51, 51);
-    /* margin-left:200px;
-    margin-right:200px; */
+    
     padding-top: 20px;
     padding-bottom: 20px;
 	overflow: hidden;
@@ -110,7 +109,6 @@ article{
 }
 .btn:active{
     background-color: #ffee7f;
-    /* border-color:none; */
 }
 /* btn:visited{
     background-color: #f1f1f1;
@@ -141,14 +139,14 @@ article{
     margin:0 auto;
 }
 
-.horizon_line2{
+/* .horizon_line2{
     width: 20px;
     height:30px;
     color:#0a1950;
     border-bottom:0px;
     text-align:center;
     margin:0 auto;
-}
+} */
 
 .box{
     background-color:rgb(255, 255, 255);
@@ -178,4 +176,45 @@ article{
 .banner-img {
     width: 300px;
     height: 405.17px;
+}
+.share{
+    margin: 0 auto;
+}
+
+/* .explain_title{
+    padding-top: 40px;
+    padding-left: 15px;
+} */
+
+.horizon_line2{
+    border-width: 4px;
+    color:#1c1c1c;
+    border-bottom:0px;
+    text-align:center;
+    margin:0 auto;
+    width: 1000px;
+}
+.job{
+    text-align: center;
+}
+.cj_button{
+    display :inline-block;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #fff9aa;
+    border: 0;
+    outline: 0;
+    font-weight: 700;
+    padding: 1rem 2rem;
+}
+.cj_button:active,
+.cj_button:hover,
+.cj_button:focus {
+    background: var(--button-hover-bg-color);
+    outline: 0;
+    background-color: #ffee7f;
+    border-color:none;
+}
+.cj_button:disabled {
+  opacity: 0.5;
 }
