@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 개발자 유형 찾기 테스트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+ <body class="container">
+    <article class="start">
+        <h2 class="mt-5 text-center"  style="font-weight: 400; font-size: large;">나는 어떤 개발자가 어울릴까?</h2>
+        <h1 class="main-title mt-2 text-center" style="font-weight: 500;">나와 어울리는 <b>창캐미</b> 찾기</h1>
+        <!-- <h2 class="text-center">임시 이미지</h2> -->
+        <button type="button" class="button mt-5" onclick='start();'>테스트 시작하기</button>
+    </article>
+
+    <article class="question">
+        <div class="stausText mt-4">
+            <div class="label" >
+            </div>
+          </div>
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%);" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        <h2 id="title1" class="text-center">Question</h2>  
+        <h2 id="title" class="text-center mt-5" style="font-weight: 400;">문제<br></h2>
+        <hr class="horizon_line">
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn mt-5">1번</button>
+        <button id="B" type="button" class="btn mt-5">2번</button>
+        <!-- btn-primary -->
+    </article>
+
+    <article class="result">
+        <h1 id="extra_cj" class="text-center" style="font-weight: 500; font-size: 20px;">유형</h1>
+        <h2 id="cj" class="text-center" style="font-weight: 900; font-size: 30px;"><b>"창캐미 이름"</b></h2>
+        <img id="img" src="imgs/soccer.png" alt="cj">
+        <br>
+        <br>
+        <h4 class="text-center"><b>"어떤 특징을 가지고 있을까?"</b></h4>
+        <!-- <br> -->
+        <!-- <hr class="horizon_line2"> -->
+        <h4 id="explain" class="mt-4 box" style="font-weight: 400; font-size: medium;">설명</h4>
+        
+        <br>
+        <br>
+        <h4 class="text-center"><b>CJ 올리브네트웍스 관련직무</b></h4>
+        <h4 class="mt-4 box" style="font-weight: 400; font-size: medium;">CJ 올리브네트웍스는 제조, 유통, 물류, 미디어 등 생활/문화 기반의 IT서비스를 성공적으로 제공하고, 끊임없는 변화와 혁신을 통해 IT트렌드에 부합하는 미래 신기술 개발로 시장의 요구에 빠르게 대응하는 ICT 전문기업입니다. 
+            <br><br><span style="background: #ffdd00">결과로 나온 유형의 직무를 CJ 올리브네트웍스에서 찾아보세요!</span> <br>
+            <br>
+            <div class="job">
+            <button type="button" class="cj_button" onclick="window.open('https://www.cjolivenetworks.co.kr/business/our_services');">디지털 서비스 직무</button>
+            <button type="button" class="cj_button" onclick="window.open('https://www.cjolivenetworks.co.kr/tech/rnd');">기술 연구</button>
+            </div>
+        </h4>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            
+        </body>
+        </html> </h4>
+            
+        <button type="button" class="button" onclick="reset();">다시 테스트 하기!</button>
+        <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="share addthis_inline_share_toolbox"></div>
+    </article>
+
+    <article class="kakao_ad mt-5">
+       
+        <ins
+          class="kakao_ad_area"
+          style="display: none"
+          data-ad-unit="DAN-PwXjskx5WFbEMAMI"
+          data-ad-width="320"
+          data-ad-height="100"
+        ></ins>
+      </article>
+      <script
+        type="text/javascript"
+        src="//t1.daumcdn.net/kas/static/ba.min.js"
+        async
+      ></script>
+    <!-- <article class="copyright">
+        <br></br>
+        <hr class="horizon_line">
+        <span class="mt-5 text-center" style="font-size:small;opacity: 0.5;">
+            Copyright 2021 @Urdervi.yu<br><b>Contact |</b> alswlkku@ajou.ac.kr</br><br>
+        </span>
+    </article>
+    <a class="mt-5 banner" href="https://www.codelion.net/catalog?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=jocoding">
+        <img class="banner-img" src="imgs/banner.png" alt="banner"> -->
+    <!-- mbti 검사 점수 -->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        var num=1;
+        var q={
+            1: {"title1":"Q1","title": "12시 수업을 막 마친 당신, <br>마침 한 시간 공강이라 점심을 먹으려 한다.</br>", "type": "EI", "A":"“점심 먹을 사람?, 공강 모여~~~~”와 함께 과단톡으로 직행한다.”", "B":"친구 부를 필요 뭐 있나, 혼밥이 편하고 좋다. 아싸 뭐 먹지~"},
+            2: {"title1":"Q2","title": "“이번 주말에 뭐해?” 라는 질문에, <br>다음 중 당신이 할 만한 대답은?</br>", "type": "JP", "A":"조조영화 볼 거야. 좋아하는 배우 신작 나왔거든. 예매? <br>당연히 해놨지~ 아, 그리고 공차 신상 나왔더라. 사먹어볼까 생각 중.</br>", "B":"주말? 글쎄… 생각해보진 않았는데. 오랜만에 영화나 볼까."},
+            3: {"title1":"Q3","title": "회사에서 나는 어떤 역할일까?", "type": "TF", "A":"하는 일이 너무 없어 칼퇴한다. 조금 눈치가 보이지만 월급루팡 최고다.", "B":"나에게 너무 많은 업무가 주어져 매일 야근을 한다. 이러한 나의 노력을 남들이 알아줬으면 한다."},
+            4: {"title1":"Q4","title": " 친구와 영화를 보고 나오는 길이다.<br>당신이 나누고 싶은 대화는?</br>", "type": "SN", "A":"크~ 재밌었다. 연기도 너무 좋았어.", "B":"너라면 그 상황에서 어떻게 할 거야? 그래? <br>그럼 만약에 세상이 무너지면? 만약에 지구가 멸망하면? 만약에~…</br>"},
+            5: {"title1":"Q5","title": "친구와 술자리를 갖던 중 소개해주고 싶은 사람이 있다고 한다.<p>지금 불러도 되냐고 물을 때 당신의 반응은?</p>", "type": "EI", "A":"언제나 환영. 새로운 사람과의 대화는 항상 즐겁다. 불러 불러~ ", "B":"으아… 불편한데. 시끄러운 술자리는 지친다. 딱 지금이 좋아. 오늘은 우리끼리 마시자."},
+            6: {"title1":"Q6","title": "교수님이 내 이름을 아신다", "type": "EI", "A":"기분이 좋다", "B":"왜 내 이름을..?"},
+            7: {"title1":"Q7","title": "기존에 있던 수강신청 방법이 새로 바뀐다고 공지가 올라온다면 나는 무슨 생각할까?", "type": "SN", "A":"기존에 있는 것도 나쁘지 않았다고 생각한다.", "B":"오! 너무 좋은데 나는 이렇게 더 추가했으면 좋았을텐대!!"},
+            8: {"title1":"Q8","title": "친구가 모르는 문제를 물어본다. 그럴 때 나는?", "type": "SN", "A":"개념 그대로를 친구에게 설명해준다.", "B":"예시를 들어서 설명해준다"},
+            9: {"title1":"Q9","title": "교수님에게 칭찬을 받게 될 때 더 기분 좋은 말은?", "type": "TF", "A":"좋은 결과 나올거다. 잘했다", "B":"열심히 노력한게 보인다"},
+            10: {"title1":"Q10","title": "침대에서 눈을 떴는데 수업 시작 1분 전이다.<br>몸은 굉장히 피곤한 상태! 그럴 때 나는?</br>", "type": "JP", "A":"최대한 빨리 수업에 참여한다.", "B":"수업 하루쯤 빠져도 괜찮다고 생각한다."},
+            11: {"title1":"Q11","title": "신입생 시절 어색한 상황에서 <br>친구를 만들기 위해 나는?</br>", "type": "TF", "A":"친구에게 계속 질문을 던져준다.", "B":"친구가 말하는 것에 적절한 리액션으로 반응해준다."},
+            12: {"title1":"Q12","title": "수강신청 이틀 전, 당신의 시간표 상태는?","type": "JP", "A":"학과에서 권장하는 커리큘럼 기반으로 플랜a부터 플랜c까지 다 짜놨다. 만족스럽다.","B":"황량하다. 확정된 건 전공필수 두 과목 뿐. <br>이대로면 6학점이지만, 괜찮다. 당신에겐 아직 ‘이틀이나’ 남았다.</br>"}
+        }
+        var result={
+            "INTP":{"extra":"백엔드 개발자","cj":'"뒤끝 창캐미"',
+            "explain":"• 효율을 중요시하는 당신은, 매사 최적의 방법을 고민해요<br><br> • 상상을 현실로! 아이디어를 실체화하는 데 탁월해요<br><br> • 비슷한 성향의 사람들과 함께라면 협업도 환영이에요<br><br> • 규칙적이고 반복적인 일은 질색이에요<br><br> • 상황에 적응하고 알맞게 대처하는 능력이 뛰어나요","img":"imgs/back.png"},
+            
+            "INFP":{"extra":"TA 개발자","cj":'"공상가 창캐미"',
+            "explain":"• 호기심이 많고, 어떠한 일의 결과보다 가능성을 보는 경향이 있으며, 아이디어를 수행하기 위한 촉매 역할을 잘해요<br><br> • 사람들의 본질을 이해하려 하고, 이들의 가능성을 성취할 수 있도록 도와요<br><br> • 타인의 감정에 민감하고, 좋아하는 사람을 기쁘게 하는 것을 즐거워해요<br><br> • 내적인 신념이 조금이라도 위협당한다고 느끼면 한 치의 양보가 없으며, 경우에 따라서 매우 이기적으로 행동을 하기도 해요<br><br> • 관습적인 것들을 좋아하지 않으며 창의력이 뛰어나고 새로운 아이디어와 정보를 잘 수용하는 편이에요","img":"imgs/dreamer.png"},
+            
+            "INTJ":{"extra":"데이터분석가","cj":'"과학자 창캐미"',
+            "explain":"• 복잡한 사고를 증겨 생각이 많은편이며 지적 호기심이 커 시간이 지날수록 지적으로 더욱 성장하는 스타일이에요<br><br> • 매우 논리적이고 합리적이며 객관적이에요<br><br> • 매우 독립적이고 이성적이여서 외로움을 잘 타지않으며, 자신의 감정에 휘둘리지 않아요<br><br> • 공과 사를 정확하게 구분하고, 자기의 얘기를 남에게 잘 하지 않아요<br><br> • 혼자서 모든 것을 해결하려는 의지가 강해요.(조별과제 혼자 다하는 스타일!)<br><br>","img":"imgs/scientist.png"},
+            
+            "INFJ":{"extra":"풀스택 개발자","cj":'"유목민 창캐미"',
+            "explain":"• 자신만의 공상에 누군가가 끼어드는 것을 꺼리는 것과 동시에 자신과 비슷한 사상을 공유하고 싶어하는 모순적인 성향을 가지고 있어요<br><br> • 조직적인 집단에서는 수평적인 구조가 편안함을 느끼고 수직적인 구조일 경우 적응에 어려움을 겪으며, 분위기를 따라가지 못하고 망치는 경우가 있어요<br><br> • 남에게 오해받는 것과 민폐 끼치는 것을 좋아하지 않아 협업보다 혼자를 좋아하는 성향을 가지고 있어요<br><br> • 외향적이고 사교성 있는 사람으로 비추어지기도 하지만 사실은 내성적이라서 혼자만의 시간을 필요로 하고 즐겨요<br><br> • 협업 시 자신에게 많은 일을 줘도 부당하다는 표현을 못 하며 주어진 일을 끝까지 혼자 하려고 노력해요<br><br>","img":"imgs/nomad.png"},
+            
+            "ISTP":{"extra":"임베디드&아키텍처 개발자","cj":'"고고학자 창캐미"',
+            "explain":"• 논리적이고 꼼꼼한 당신은 프로일잘러예요<br><br> • 배우고 싶은 게 많아 이것저것 시도해보는 편이에요<br><br> • 협업보다는 혼자 일하는 걸 선호해요 (협업이 불가피할 땐 리더 역할을 선호해요)<br><br> • 생산적이고 효율적인 라이프스타일을 추구해요<br><br> • 대충대충이란 사전에 없다! 목표한 일은 마무리까지 완벽하게 해내요","img":"imgs/archeologist.png"},
+            
+            "ISFP":{"extra":"DB 개발자","cj":'"사서 창캐미"',
+            "explain":"• 매사에 꼼꼼하고 신중한 편이에요<br><br> • 나무보다는 먼저 숲을 보며 상황 전반을 파악하는 타입이에요<br><br> • 다양한 일을 동시에 척척! 멀티태스킹에 유능해요<br><br> • 무질서한 상태는 곧 스트레스. 정리정돈을 좋아해요<br><br> • 다재다능한 당신은 팀 프로젝트 시 종종 중요한 역할을 맡아요<br><br>","img":"imgs/librarian.png"},
+            
+            "ISTJ":{"extra":"시스템개발자","cj":'"건축가 창캐미"',
+            "explain":"• 책임감이 강해 주어진 업무나 책임을 끝까지 완수해요<br><br>• 예고없이 갑작스러운 변화를 매우 싫어하며 원리, 원칙을 중시해요<br><br>• 직설적인 표현을 많이 하는 편이에요<br><br>• 남들이 본인의 의견을 참견하는 것을 싫어해요<br><br>• 보편적인 요소와 일들에 많은 흥미를 가지며 소위 말하는 특이한 것과 튀는 것에 관심이 적은 편이에요<br><br>","img":"imgs/architect.png"},
+            
+            "ISFJ":{"extra":"블록체인 개발자","cj":'"모험가 창캐미"',
+            "explain":"• 규칙은 질색! 자유로운 영혼의 소유자에요<br><br>• 협업보단 혼자 일하는 걸 선호해요<br><br> • 한 번 시작한 일은 완벽에 가깝게 해내고자 해요<br><br> • 특유의 섬세함과 깊은 통찰력으로 주변에 감동을 주는 사람이에요<br><br> • 옳다고 생각하는 일이라면 기꺼이 매진해요<br><br>","img":"imgs/adventurer.png"},
+            
+            "ENTP":{"extra":"IOS앱 개발자","cj":'"사과 창캐미"',
+            "explain":"• 딱히 공부 안 하는 것 같은데 성적 잘 나오는 사람, 바로 당신이에요<br><br>• 주변으로부터 센스 있다는 이야기를 종종 들어요<br><br>• 다양한 사람들과 소통하고 어울리면서도, 일은 혼자 하는 걸 선호해요<br><br>• 비생산적인 토론에도 기꺼이 참여해요 (오히려 즐겨요) <br><br>• 상상을 현실로! 아이디어를 실체화하는 데 탁월해요 <br><br>","img":"imgs/apple.png"},
+            
+            "ENFP":{"extra":"AI 개발자","cj":'"알파고 창캐미"',
+            "explain":"• 위기대처능력이 굉장히 뛰어나요<br><br>• 반복적인 일상과 단순한 암기를 좋아하지 않고 자신이 관심 없는 분야에는 인내력이 부족해요<br><br>• 어떤 그룹에서든 분위기 메이커를 자처하고 분위기를 잘뛰우며 만남을 잘 주선해요<br><br>• 공감능력이 뛰어나며 반대로 감동도 잘 받는편이에요<br><br>• 두뇌회전이 빠른 편이고, 직관력을 이용하여 어떤 문제에 대한 대략적인 이해가 뛰어나요<br><br>","img":"imgs/alphago.png"},
+            
+            "ENTJ":{"extra":"보안전문가","cj":'"경찰 창캐미"',
+            "explain":"• 매우 활동적이고 성취하는것을 좋아해요<br><br>• 항상 자기 발전을 모색하며 전문적인 지식과 권위를 키워나가며 무엇보다 커리어를 중시해요<br><br>• 집중력이 뛰어나지만 반대로 멀티에도 능하기때문에 이들은 여러 가지 일을 동시에 진행하고 해결하는데 능숙해요<br><br>• 선천적으로 리더형임과 동시에 책임감이 강해 자신혹은 팀이 맡은 일에 최선을 다하고 목표를 정하면 대부분의 경우 목표를 달성하고나, 초과 달성하는 결과는 내요<br><br>• 분석형이라 상황판단이 빠르며 현재의 행동이 미래에 미칠 영향까지 예상하는 능력이 뛰어나요"
+            ,"img":"imgs/police.png"},
+            
+            "ENFJ":{"extra":"프론트엔드 개발자","cj":'"앞끝 창캐미"',
+            "explain":"• 다른 사람들의 생각이나 의견에 진지한 관심을 가지고 공동선을 위하여 다른 사람의 의견에 대체로 동의해요<br><br>• 미래의 가능성을 추구하며 편안하고 능란하게 계획 을 제시하고 집단을 이끌어가는 능력이 있어요<br><br>• 센스 있고 눈치가 빠르나 계획에 조금이라도 벗어나면 화가나서 협업할 때 조심해야할 유형 중 하나에요<br><br>• 타인의 관심사에 귀 기울이며 그들을 배려한며, 감정이입에 뛰어나 스스로 스트레스를 받는 경우도 있어요<br><br>• 결과물에 시각적인 요소가 많은 것을 좋아해서 결과물이 바로 나타나는 것에 뿌듯해해요<br><br>","img":"imgs/front.png"},
+            
+            "ESTP":{"extra":"게임엔지너어","cj":'"아인슈타인 창캐미"',
+            "explain":"• 하나에 꽂히면 끝을 보는 타입이에요<br><br>• 추상적인 아이디어를 구체화하는 데 탁월해요<br><br>관심 있는 분야라면 집중력 MAX! 선택과 집중의 달인이에요<br><br>• 다양한 사람들과 소통하고 어울리면서도, 일은 혼자 하는 걸 선호해요<br><br>• 명확한 주제를 가지고 생산적인 대화를 나누는 걸 즐겨요<br><br>","img":"imgs/einstein.png"},
+            
+            "ESFP":{"extra":"게임클라이언트","cj":'"창조주 창캐미"',
+            "explain":"• 세상엔 재밌는 게 너무 많아! 언제나 호기심으로 가득해요<br><br>• 친구들이 여럿 모이는 자리라면 당신이 빠질 수 없어요<br><br>• 다재다능하고 손재주가 많은 편이에요<br><br>• 사람들과 함께 아이디어를 나누고 구체화하는 일을 선호해요<br><br>• 매일 노는 것 같지만, 당신은 다 계획이 있어요<br><br>","img":"imgs/creator.png"},
+            
+            "ESTJ":{"extra":"QA 개발자","cj":'"사감 창캐미"',
+            "explain":"• 타인의 단점들을 디테일하게 지적하고 즉각 수정하기를 요구를 잘하는 편이에요<br><br>• 겉보기에 자기관리가 철저하고 엄격하며 주위 사람들에게 냉담해 보이지만 가족과 친구, 직장 부하 등의 사람들에게 강한 책임감과 유대감을 가지고 끝까지 의리를 보여주는 속정이 깊은 스타일이에요<br><br>• 상당히 독립적이고 혼자 자기계발을 하는 시간이 대부분이며, 외부에서의 모습과 내부에서의 모습이 완전 딴판이라 친해지고 나서 완전 다른 모습을 가지고 있어요<br><br>• 많은 사람들과의 새로운 인간관계를 맺고 노는 것 보다는 새로운 지식을 학습하거나 취미생활을 하나 더 배우는 것을 즐겨요<br><br>• 현실적인 대책방안이 명확히 나지 않는 토론을 좋게 여기지 않는 편이며 타인과의 의사소통에서도 명확한 결론이 나는 소통을 선호해요<br><br>","img":"imgs/houseparent.png"},
+            
+            "ESFJ":{"extra":"안드로이드앱 개발자","cj":'"별별 창캐미"',
+            "explain":"• 감성 반, 이성 반에 가까운 당신은 조화로운 사람이에요<br><br>• 규칙은 질색! 자유로운 영혼의 소유자예요<br><br> • 매사 실용적이고 효율적인 방식을 추구해요<br><br>• 사람들과 함께 아이디어를 나누고 구체화하는 데 탁월해요<br><br> • 실현 가능한 아이디어들이 머릿속에 넘쳐나곤 해요<br><br>","img":"imgs/android.png"},
+
+        }
+
+        function start(){
+            $(".start").hide();
+            //start 화면 사라지는거
+            $(".question").show();
+            //보여주기
+            next();
+        }
+        $("#A").click(function(){
+            var type=$("#type").val();
+            console.log(type);
+            var preValue=$("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+
+        });
+        $("#B").click(function(){
+            next();
+        });
+        function next(){
+            if(num==13){
+                $(".question").hide();
+                $(".result").show();
+                    
+                var mbti="";
+                ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
+                ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
+                $("#img").attr("src",result[mbti]["img"]);
+                $("#extra_cj").html(result[mbti]["extra"]);
+                $("#cj").html(result[mbti]["cj"]);
+                $("#explain").html(result[mbti]["explain"]);
+    
+            }else{
+                //$(".label").attr('style','innerHTML: num+1 +"/"+ endPoint;');
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%);');
+                $("#title1").html(q[num]["title1"]);
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+        function reset() {
+            num = 1;
+            $("#EI").val("");
+            $("#SN").val("");
+            $("#TF").val("");
+            $("#JP").val("");
+    
+            $(".progress-bar").attr(
+              "style",
+              "width: calc(100 / 12 * " + num + "%)"
+            );
+            $(".question").show();
+            $(".result").hide();
+            //$("#img").hide();
+            //$("#extra").hide();
+            //$("#cj").hide();
+            //$("#explain").hide();
+            $("#title1").html(q[num]["title1"]);
+            $("#title").html(q[num]["title"]);
+            next();
+          }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62c12892675c4572"></script>
+
+
+
+</body>
+</html>
