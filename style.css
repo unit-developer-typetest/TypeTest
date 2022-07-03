@@ -243,7 +243,11 @@ article{
     .body {
         display: block;
     }
-    .body .sidebar {
+    .body.sidebar {
         min-height: 0;
+    }
+    .body.contents {  
+        margin-bottom: 10px; 
+        margin-right: 0px;
     }
 }
