@@ -26,6 +26,8 @@ article{
     height: 500px;
     padding-top: 50px;
     margin:0 auto;
+    padding-left: 5px;
+    padding-right:15px;
 }
 
 #img{
@@ -34,6 +36,8 @@ article{
     height: 500px;
     padding-top: 50px;
     margin:0 auto;
+    padding-left: 5px;
+    padding-right:15px;
 }
 
 #extra_cj{
@@ -217,9 +221,9 @@ article{
 .job{
     text-align: center;
 }
-.cj_button{
+.cj_button1{
     display :inline-block;
-    margin-right: 15px;
+    margin-right: 5px;
     border-radius: 4px;
     background-color: #fff9aa;
     border: 0;
@@ -227,15 +231,36 @@ article{
     font-weight: 700;
     padding: 1rem 2rem;
 }
-.cj_button:active,
-.cj_button:hover,
-.cj_button:focus {
+.cj_button1:active,
+.cj_button1:hover,
+.cj_button1:focus {
     background: var(--button-hover-bg-color);
     outline: 0;
     background-color: #ffee7f;
     border-color:none;
 }
-.cj_button:disabled {
+.cj_button1:disabled {
+  opacity: 0.5;
+}
+.cj_button2{
+    display :inline-block;
+    margin-left: 10px;
+    border-radius: 4px;
+    background-color: #fff9aa;
+    border: 0;
+    outline: 0;
+    font-weight: 700;
+    padding: 1rem 2rem;
+}
+.cj_button2:active,
+.cj_button2:hover,
+.cj_button2:focus {
+    background: var(--button-hover-bg-color);
+    outline: 0;
+    background-color: #ffee7f;
+    border-color:none;
+}
+.cj_button2:disabled {
   opacity: 0.5;
 }
 
