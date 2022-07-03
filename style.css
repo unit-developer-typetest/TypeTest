@@ -1,6 +1,14 @@
+@font-face {
+    font-family:'Happy' ;
+    src: url('file:///Users/hansol/Downloads/screen/webfont/Happiness-Sans-Bold.woff') format('woff');
+}
+
+*{
+    font-family: 'Happy';
+}
+
 body{
     background-color:#fff9aa;
-    font-family: 'Noto Sans KR';
     letter-spacing: -0.5px;
 
 }
