@@ -240,6 +240,8 @@ article{
 }
 
 @media (max-width:600px){ /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+    
+    
     .body {
         display: block;
     }
@@ -249,5 +251,11 @@ article{
     .body.contents {  
         margin-bottom: 10px; 
         margin-right: 0px;
+    }
+    #imgs{
+        width: 200px;
+        height: 300px;
+        padding-top: 40px;
+        margin:0 auto;
     }
 }
