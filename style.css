@@ -1,6 +1,6 @@
 @font-face {
     font-family:'Happy' ;
-    src: url('file:///Users/hansol/Downloads/screen/webfont/Happiness-Sans-Bold.woff') format('woff');
+    src: url('./fonts/EliceDigitalBaeum_Regular.woff') format('woff');
 }
 
 *{
@@ -10,7 +10,7 @@
 body{
     background-color:#fff9aa;
     letter-spacing: -0.5px;
-
+    font-family: 'Happy';
 }
 article{
     display: flex;
