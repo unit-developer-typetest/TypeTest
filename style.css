@@ -247,14 +247,14 @@ article{
     text-align: center;
 }
 .cj_button1{
-    display :inline-block;
-    margin-right: 5rem;
+    display :block;
+    margin:auto;
     border-radius: 4rem;
     background-color: #fff9aa;
     border: 0;
     outline: 0;
     font-weight: 700;
-    padding: 1rem 2rem;
+    width:300px;
 }
 .cj_button1:active,
 .cj_button1:hover,
@@ -267,7 +267,7 @@ article{
 .cj_button1:disabled {
   opacity: 0.5;
 }
-.cj_button2{
+/* .cj_button2{
     display :inline-block;
     margin-left: 10rem;
     border-radius: 4rem;
@@ -287,7 +287,7 @@ article{
 }
 .cj_button2:disabled {
   opacity: 0.5;
-}
+} */
 
 @media (max-width:600px){ /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
     
@@ -309,14 +309,14 @@ article{
         margin:0 auto;
     }
     .cj_button1{
-        display :inline-block;
-        margin-right: 1rem;
-        border-radius: 2rem;
+        display :block;
+        margin:auto;
+        border-radius: 4rem;
         background-color: #fff9aa;
         border: 0;
         outline: 0;
-        font-weight: 700;
-        padding: 1rem 2rem;
+        font-weight: 500;
+        width:300px;
     }
     .cj_button1:active,
     .cj_button1:hover,
@@ -329,7 +329,7 @@ article{
     .cj_button1:disabled {
       opacity: 0.5;
     }
-    .cj_button2{
+    /* .cj_button2{
         display :inline-block;
         margin-left: 2rem;
         border-radius: 4rem;
@@ -349,5 +349,5 @@ article{
     }
     .cj_button2:disabled {
       opacity: 0.5;
-    }
+    } */
 }
