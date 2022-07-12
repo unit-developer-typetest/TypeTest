@@ -257,7 +257,7 @@ article{
     width:300px;
     color: #000000;
 }
-.cj_button1:active,
+/* .cj_button1:active,
 .cj_button1:focus {
     background: var(--button-hover-bg-color);
     background-color: #ffee7f;
@@ -266,7 +266,7 @@ article{
 }
 .cj_button1:disabled {
   opacity: 0.5;
-}
+} */
 /* .cj_button2{
     display :inline-block;
     margin-left: 10rem;
