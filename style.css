@@ -146,13 +146,13 @@ article{
     padding-bottom: 20px;
 	cursor: default;  
 }
-.btn:hover{
+/* .btn:hover{
 	background-color: #ffee7f;
 }
 .btn:active, .btn:focus{
     border: none !important;
     box-shadow: none !important;
-}
+} */
 /* .btn:active{
     background-color: #ffee7f;
 }
@@ -257,16 +257,17 @@ article{
     width:300px;
     color: #000000;
 }
-/* .cj_button1:active,
+.cj_button1:active,
+.cj_button1:hover,
 .cj_button1:focus {
     background: var(--button-hover-bg-color);
+    outline: 0;
     background-color: #ffee7f;
     border-color:none;
-    outline: none !important; box-shadow: none !important;
 }
 .cj_button1:disabled {
   opacity: 0.5;
-} */
+}
 /* .cj_button2{
     display :inline-block;
     margin-left: 10rem;
@@ -318,7 +319,7 @@ article{
         font-weight: 500;
         width:300px;
         color: #000000;
-        width: 90%
+        width: 100%
     }
     .cj_button1:active,
     .cj_button1:hover,
