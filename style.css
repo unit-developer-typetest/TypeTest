@@ -88,6 +88,53 @@ article{
 .share{
     margin:0 auto;
 }
+/* .result_bnt{
+
+    text-align: center;
+    
+    width: 70%;
+   
+    background-color: #fff9aa;
+    border-color: #000000;
+    color: #1c1c1c;
+
+	
+    border: 0;
+    outline: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	cursor: default;
+} */
+
+
+.btnr1{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 4px;
+    background-color: #fff9aa;
+    border-color: #000000;
+    color: #1c1c1c;
+    font-weight: 600;
+    text-align: center;
+    width: 30%;
+    height: 50px;
+    margin: auto;
+}
+
+.btnr2{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 4px;
+    background-color: #fff9aa;
+    border-color: #000000;
+    color: #1c1c1c;
+    font-weight: 600;
+    text-align: center;
+    width: 30%;
+    height: 50px;
+    margin: auto;
+}
+
 .button{
     /* width: 400px;
     height:100px; */
@@ -147,14 +194,14 @@ article{
     padding-bottom: 20px;
 	cursor: default;  
 }
-.btn:hover{
+/* .btn:hover{
 	background-color: #ffee7f;
 }
 .btn:active, .btn:focus{
     border: none !important;
     box-shadow: none !important;
     outline: none;
-}
+} */
 
 .progress-bar{
     height: 100%;
@@ -244,8 +291,8 @@ article{
     background-color: #fff9aa;
     border: 0;
     outline: 0;
-    font-weight: 700;
-    width:400px;
+    font-weight: 800;
+    width:90%;
     color: #000000;
 }
 .cj_button1:active,
@@ -310,7 +357,7 @@ article{
         font-weight: 500;
         width:300px;
         color: #000000;
-        width: 100%
+        width: 80%
     }
     .cj_button1:active,
     .cj_button1:hover,

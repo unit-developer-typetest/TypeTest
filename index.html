@@ -49,7 +49,7 @@
         <img id="img" src="imgs/soccer.png" alt="cj">
         <br>
         <br>
-        <h4 class="text-center" style="font-weight: 700; font-size: 30px;"><b>"어떤 특징을 가지고 있을까?"</b></h4>
+        <h4 class="text-center" style="font-weight: 700; font-size: 28px;"><b>"어떤 특징을 가지고 있을까?"</b></h4>
         <!-- <br> -->
         <!-- <hr class="horizon_line2"> -->
         <h4 id="explain" class="mt-4 box" style="font-weight: 400; font-size: medium;">설명</h4>
@@ -61,7 +61,7 @@
         <!-- <h4 id="explain" class="mt-4 box" style="font-weight: 400; font-size: medium;">설명</h4> -->
         <br>
         <br>
-        <h4 class="text-center"style="font-weight: 700; font-size: 30px;">"CJ올리브네트웍스 관련직무"</h4>
+        <h4 class="text-center"style="font-weight: 700; font-size: 28px;">"CJ올리브네트웍스 관련직무"</h4>
         <h4 class="mt-4 box" style="font-weight: 400; font-size: medium;">CJ올리브네트웍스는 1995년 창립이래 제조, 유통, 물류, 미디어 등 생활·문화 기반의 IT서비스를 성공적으로 제공함으로써 견실하고 안정적인 성장을 지속해오고 있습니다. 또한 IT시스템 구축 및 서비스 제공을 통해 축적된 경험과 역량을 바탕으로 인공지능(AI), 빅데이터(Big Data), 사물인터넷(IoT), 클라우드 컴퓨팅(Cloud Computing), 무인화 매장 솔루션(One Order), 보안(Security) 등 최신 IT트렌드에 부합하는 미래 신기술 개발을 주도하며 글로벌 ICT기업으로 도약하고 있습니다. 
             <br><br><span style="background: #ffdd00">결과로 나온 유형의 직무를 CJ올리브네트웍스에서 찾아보세요!</span> <br>
             <br>
@@ -71,9 +71,15 @@
             </div>
         </h4>
         </html> </h4>
-            
-        <button type="button" class="button" onclick="reset();">다시 테스트 하기!</button>
-        <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="text-center addthis_inline_share_toolbox_g2cw"></div>
+        <!-- <div id="result_bnt"> -->
+        <br>
+        <br>
+        <br>
+        <button type="button" class="btnr1" onclick="reset();">다시 테스트 하기</button>
+        <br>
+        <button type="button" class="btnr2" onclick="link();">테스트 공유하기</button>
+        </div>
+        <!-- Go to www.addthis.com/dashboard to customize your tools <div class="text-center addthis_inline_share_toolbox_g2cw"></div> -->
     </article>
 
     <article class="kakao_ad mt-5">
@@ -245,6 +251,19 @@
             $("#title").html(q[num]["title"]);
             next();
           }
+
+          function link(){
+			var url = 'https://unit-developer-typetest.github.io/TypeTest/';
+			var textarea = document.createElement("textarea");
+			document.body.appendChild(textarea);
+			url = window.document.location.href;
+			textarea.value = url;
+			textarea.select();
+			document.execCommand("copy");
+			document.body.removeChild(textarea);
+			alert("URL이 복사되었습니다.")
+		}
+
     </script>
     <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62c12892675c4572"></script>
 
