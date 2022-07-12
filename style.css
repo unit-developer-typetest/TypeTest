@@ -141,29 +141,20 @@ article{
 	background-color: #ffffff;
 	border-color: #ffffff;
 	color: rgb(51, 51, 51);
-    
+    border: 0;
+    outline: 0;
     padding-top: 20px;
     padding-bottom: 20px;
 	cursor: default;  
 }
-/* .btn:hover{
+.btn:hover{
 	background-color: #ffee7f;
 }
 .btn:active, .btn:focus{
     border: none !important;
     box-shadow: none !important;
-} */
-/* .btn:active{
-    background-color: #ffee7f;
+    outline: none;
 }
-.btn:visited{
-    background-color: #f1f1f1;
-	border-color: #f1f1f1;
-    color: #333;
-} 
-.btn:disabled {
-    opacity: 0.3;
-  } */
 
 .progress-bar{
     height: 100%;
@@ -254,7 +245,7 @@ article{
     border: 0;
     outline: 0;
     font-weight: 700;
-    width:300px;
+    width:400px;
     color: #000000;
 }
 .cj_button1:active,
