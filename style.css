@@ -255,6 +255,7 @@ article{
     outline: 0;
     font-weight: 700;
     width:300px;
+    color: #000000;
 }
 .cj_button1:active,
 .cj_button1:hover,
@@ -317,6 +318,7 @@ article{
         outline: 0;
         font-weight: 500;
         width:300px;
+        color: #000000;
     }
     .cj_button1:active,
     .cj_button1:hover,
