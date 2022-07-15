@@ -135,6 +135,27 @@ article{
     margin: auto;
 }
 
+.btnr1:active,
+.btnr1:hover,
+.btnr1:focus {
+    background: var(--button-hover-bg-color);
+    outline: 0;
+    background-color: #ffee7f;
+    border-color:none;
+}
+
+.btnr2:active,
+.btnr2:hover,
+.btnr2:focus {
+    background: var(--button-hover-bg-color);
+    outline: 0;
+    background-color: #ffee7f;
+    border-color:none;
+}
+/* .button:disabled {
+  opacity: 0.5;
+} */
+
 .button{
     /* width: 400px;
     height:100px; */
